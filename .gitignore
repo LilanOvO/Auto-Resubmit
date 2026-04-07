@@ -20,6 +20,7 @@ dist/
 
 outputs
 outputs/
+tools/
 testdata/*
 !testdata/README.md
 image.png

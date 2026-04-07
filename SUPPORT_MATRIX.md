@@ -13,13 +13,7 @@ The project is organized around template families rather than per-year venue nam
 | CVPR family | `cvpr`, `iccv` | `cvpr.sty` | standard `\maketitle` | `ieeenat_fullname` |
 | AAAI family | `aaai` | `aaai2026.sty` | standard `\maketitle` + `\affiliations{}` | template-managed |
 
-## Validation Scope
-
-The repository includes local validation utilities for:
-
-- source-template to supported-family validation: `tools/validate_supported_families.py`
-- pairwise family-to-family validation: `tools/validate_mutual_families.py`
-- page rendering for manual inspection: `tools/render_pdf_contact_sheets.py`
+## Supported Coverage
 
 Current supported family matrix:
 

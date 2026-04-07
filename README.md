@@ -94,33 +94,6 @@ On success, the output directory contains:
 - Figures, `.bib`, and local `.sty` files should be included in the zip
 - Projects that depend on private shell scripts or missing external assets are out of scope
 
-## Validation Tools
-
-Validate one source project against all supported families:
-
-```bash
-PYTHONPATH=src python tools/validate_supported_families.py \
-  --source-zip /path/to/source-paper.zip \
-  --output-dir outputs/supported-families
-```
-
-Run the pairwise family-to-family validation matrix:
-
-```bash
-PYTHONPATH=src python tools/validate_mutual_families.py \
-  --seed-source-zip /path/to/source-paper.zip \
-  --output-dir outputs/mutual-matrix
-```
-
-Render PDF contact sheets for manual inspection:
-
-```bash
-python tools/render_pdf_contact_sheets.py \
-  --input-dir outputs/mutual-matrix \
-  --output-dir outputs/contact-sheets \
-  --clean
-```
-
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=LilanOvO/Auto-Resubmit&type=Date)](https://star-history.com/#LilanOvO/Auto-Resubmit&Date)

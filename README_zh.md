@@ -92,33 +92,6 @@ PYTHONPATH=src python -m auto_resubmit run \
 - 图片、`.bib`、本地 `.sty` 等依赖文件应一并打包
 - 依赖私有脚本或缺失外部资源的项目不在当前支持范围内
 
-## 验证脚本
-
-检查一个源项目在所有支持家族上的转换情况：
-
-```bash
-PYTHONPATH=src python tools/validate_supported_families.py \
-  --source-zip /path/to/source-paper.zip \
-  --output-dir outputs/supported-families
-```
-
-运行家族两两互转验证：
-
-```bash
-PYTHONPATH=src python tools/validate_mutual_families.py \
-  --seed-source-zip /path/to/source-paper.zip \
-  --output-dir outputs/mutual-matrix
-```
-
-把生成的 PDF 渲染成逐页缩略图，方便人工检查：
-
-```bash
-python tools/render_pdf_contact_sheets.py \
-  --input-dir outputs/mutual-matrix \
-  --output-dir outputs/contact-sheets \
-  --clean
-```
-
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=LilanOvO/Auto-Resubmit&type=Date)](https://star-history.com/#LilanOvO/Auto-Resubmit&Date)
