@@ -31,7 +31,7 @@
 </p>
 </div>
 
-## 项目简介
+## 项目简介 🧭
 
 Auto-Resubmit 用来把源 LaTeX 论文项目 zip 迁移到目标会议模板 zip，同时尽量保持论文内容不变。
 
@@ -45,7 +45,7 @@ Auto-Resubmit 用来把源 LaTeX 论文项目 zip 迁移到目标会议模板 zi
 - 复制图片、`.bib` 和本地资源
 - 编译并打包输出
 
-## 当前支持的会议家族
+## 当前支持的会议家族 🔁
 
 | 家族 | 会议别名 |
 | --- | --- |
@@ -58,7 +58,7 @@ Auto-Resubmit 用来把源 LaTeX 论文项目 zip 迁移到目标会议模板 zi
 
 详细说明见 [SUPPORT_MATRIX.md](SUPPORT_MATRIX.md)
 
-## 安装
+## 安装 ⚙️
 
 - Python 3.10+
 - 可用的 `tectonic` 编译器，用于生成 PDF
@@ -78,7 +78,7 @@ pip install -e .
 tectonic --version
 ```
 
-## 快速开始
+## 快速开始 🚀
 
 ```bash
 auto_resubmit run \
@@ -87,7 +87,7 @@ auto_resubmit run \
   --output-dir /path/to/output-dir
 ```
 
-## 输出内容
+## 输出内容 📦
 
 运行成功后，输出目录通常包含：
 
@@ -98,7 +98,7 @@ auto_resubmit run \
 - `content_audit.json`
 - `converted_project/tectonic.log`
 
-## 输入建议
+## 输入建议 📝
 
 - 源输入应为 LaTeX 项目 zip，而不是 PDF
 - 目标输入应为官方会议模板 zip
@@ -106,11 +106,11 @@ auto_resubmit run \
 - 图片、`.bib`、本地 `.sty` 等依赖文件应一并打包
 - 依赖私有脚本或缺失外部资源的项目不在当前支持范围内
 
-## Star History
+## Star History ⭐
 
 [![Star History Chart](https://api.star-history.com/svg?repos=LilanOvO/Auto-Resubmit&type=Date)](https://star-history.com/#LilanOvO/Auto-Resubmit&Date)
 
-## 后续计划
+## 后续计划 🛣️
 
 这个仓库目前还是 Auto-Resubmit 的初步版本。
 

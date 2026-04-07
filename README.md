@@ -31,7 +31,7 @@
 </p>
 </div>
 
-## Overview
+## Overview 🧭
 
 Auto-Resubmit converts a source LaTeX paper zip into a target conference template zip while keeping the manuscript content intact.
 
@@ -47,7 +47,7 @@ It is designed for the common resubmission workflow:
 - copy figures, `.bib`, and local assets
 - compile the converted project and package the result
 
-## Supported Families
+## Supported Families 🔁
 
 | Family | Venue Names |
 | --- | --- |
@@ -60,7 +60,7 @@ It is designed for the common resubmission workflow:
 
 Details: [SUPPORT_MATRIX.md](SUPPORT_MATRIX.md)
 
-## Installation
+## Installation ⚙️
 
 - Python 3.10+
 - A working `tectonic` installation for PDF compilation
@@ -80,7 +80,7 @@ Check that the LaTeX compiler is available:
 tectonic --version
 ```
 
-## Quick Start
+## Quick Start 🚀
 
 ```bash
 auto_resubmit run \
@@ -89,7 +89,7 @@ auto_resubmit run \
   --output-dir /path/to/output-dir
 ```
 
-## Output
+## Output 📦
 
 On success, the output directory contains:
 
@@ -100,7 +100,7 @@ On success, the output directory contains:
 - `content_audit.json`
 - `converted_project/tectonic.log`
 
-## Input Guidelines
+## Input Guidelines 📝
 
 - Source input should be a LaTeX project zip, not a PDF
 - Target input should be an official conference template zip
@@ -108,11 +108,11 @@ On success, the output directory contains:
 - Figures, `.bib`, and local `.sty` files should be included in the zip
 - Projects that depend on private shell scripts or missing external assets are out of scope
 
-## Star History
+## Star History ⭐
 
 [![Star History Chart](https://api.star-history.com/svg?repos=LilanOvO/Auto-Resubmit&type=Date)](https://star-history.com/#LilanOvO/Auto-Resubmit&Date)
 
-## Roadmap
+## Roadmap 🛣️
 
 This repository is still an early version of Auto-Resubmit.
 
