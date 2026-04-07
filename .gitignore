@@ -23,6 +23,7 @@ outputs/
 tools/
 testdata/
 image.png
+image2.png
 
 plan.md
 sever-config.md

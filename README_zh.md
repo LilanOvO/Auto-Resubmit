@@ -1,8 +1,5 @@
 <div align="center">
-<h1>
-  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit logo" width="104" />
-  Auto-Resubmit
-</h1>
+  <img src="assets/auto-resubmit-header.png" alt="Auto-Resubmit" width="860" />
 
 <p><strong>面向会议重投的 LaTeX 模板无损迁移工具。</strong></p>
 
