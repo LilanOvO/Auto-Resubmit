@@ -21,8 +21,7 @@ dist/
 outputs
 outputs/
 tools/
-testdata/*
-!testdata/README.md
+testdata/
 image.png
 
 plan.md

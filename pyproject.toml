@@ -16,8 +16,5 @@ dependencies = []
 [project.scripts]
 auto_resubmit = "auto_resubmit.cli:main"
 
-[tool.setuptools]
-package-dir = {"" = "src"}
-
 [tool.setuptools.packages.find]
-where = ["src"]
+include = ["auto_resubmit*"]

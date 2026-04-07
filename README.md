@@ -69,7 +69,7 @@ tectonic --version
 ## Quick Start
 
 ```bash
-PYTHONPATH=src python -m auto_resubmit run \
+auto_resubmit run \
   --source-zip /path/to/source-paper.zip \
   --target-template-zip /path/to/target-template.zip \
   --output-dir /path/to/output-dir
