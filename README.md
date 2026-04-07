@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit banner" width="420" />
+  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit banner" width="120" />
 
 # Auto-Resubmit
 
