@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit banner" width="760" />
+  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit banner" width="620" />
 
 # Auto-Resubmit
 
@@ -20,6 +20,8 @@
 ## Overview
 
 Auto-Resubmit converts a source LaTeX paper zip into a target conference template zip while keeping the manuscript content intact.
+
+中文说明：给定“源论文 LaTeX 项目 zip”和“目标会议模板 zip”，工具会自动抽取论文主体内容，并按目标会议模板重新组装、编译和打包，尽量减少手工改模板的工作量。
 
 It is designed for the common resubmission workflow:
 
@@ -44,10 +46,25 @@ It is designed for the common resubmission workflow:
 
 Details: [SUPPORT_MATRIX.md](SUPPORT_MATRIX.md)
 
-## Requirements
+## Installation
 
 - Python 3.10+
 - A working `tectonic` installation for PDF compilation
+
+Set up the Python environment:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -e .
+```
+
+Check that the LaTeX compiler is available:
+
+```bash
+tectonic --version
+```
 
 ## Quick Start
 
@@ -103,10 +120,6 @@ python tools/render_pdf_contact_sheets.py \
   --output-dir outputs/contact-sheets \
   --clean
 ```
-
-## Repository
-
-Git should only track code, tests, docs, and public assets. Local paper zips, template zips, generated outputs, and machine-specific files are already ignored through [.gitignore](.gitignore).
 
 ## Star History
 

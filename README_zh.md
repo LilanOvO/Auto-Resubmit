@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit banner" width="760" />
+  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit banner" width="620" />
 
 # Auto-Resubmit
 
@@ -44,10 +44,25 @@ Auto-Resubmit 用来把源 LaTeX 论文项目 zip 迁移到目标会议模板 zi
 
 详细说明见 [SUPPORT_MATRIX.md](SUPPORT_MATRIX.md)
 
-## 环境要求
+## 安装
 
 - Python 3.10+
 - 可用的 `tectonic` 编译器，用于生成 PDF
+
+先创建并安装 Python 环境：
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -e .
+```
+
+再确认 LaTeX 编译器可用：
+
+```bash
+tectonic --version
+```
 
 ## 快速开始
 
@@ -103,10 +118,6 @@ python tools/render_pdf_contact_sheets.py \
   --output-dir outputs/contact-sheets \
   --clean
 ```
-
-## 仓库说明
-
-公开仓库只建议保留代码、测试、文档和公开素材。私有论文 zip、模板 zip、生成产物和机器相关文件，已经通过 [.gitignore](.gitignore) 排除。
 
 ## Star History
 
