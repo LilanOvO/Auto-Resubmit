@@ -7,7 +7,6 @@
   <img src="https://img.shields.io/badge/ACL-0f766e?style=flat-square" alt="ACL" />
   <img src="https://img.shields.io/badge/EMNLP-0ea5e9?style=flat-square" alt="EMNLP" />
   <img src="https://img.shields.io/badge/NeurIPS-7c3aed?style=flat-square" alt="NeurIPS" />
-  <img src="https://img.shields.io/badge/NIPS-a855f7?style=flat-square" alt="NIPS" />
   <img src="https://img.shields.io/badge/ICML-f97316?style=flat-square" alt="ICML" />
   <img src="https://img.shields.io/badge/ICLR-ef4444?style=flat-square" alt="ICLR" />
   <img src="https://img.shields.io/badge/CVPR-2563eb?style=flat-square" alt="CVPR" />
