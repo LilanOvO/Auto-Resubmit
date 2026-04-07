@@ -21,7 +21,7 @@
 
 Auto-Resubmit converts a source LaTeX paper zip into a target conference template zip while keeping the manuscript content intact.
 
-中文说明：给定“源论文 LaTeX 项目 zip”和“目标会议模板 zip”，工具会自动抽取论文主体内容，并按目标会议模板重新组装、编译和打包，尽量减少手工改模板的工作量。
+自动重投：给定“源论文 LaTeX 项目 zip”和“目标会议模板 zip”，工具会自动抽取论文主体内容，并按目标会议模板重新组装、编译和打包，尽量减少手工改模板的工作量。
 
 It is designed for the common resubmission workflow:
 
