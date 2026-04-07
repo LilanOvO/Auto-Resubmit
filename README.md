@@ -1,9 +1,15 @@
 <div align="center">
-  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit banner" width="320" />
+  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit banner" width="420" />
 
 # Auto-Resubmit
 
 <p><strong>Lossless LaTeX template migration for conference resubmission.</strong></p>
+
+<p><strong>ACL / EMNLP / NeurIPS / NIPS / ICML / ICLR / CVPR / ICCV / AAAI</strong></p>
+
+<p><strong>Mutual conversion across supported conference families</strong></p>
+
+<p><code>source paper zip</code> → <code>Auto-Resubmit</code> → <code>target conference template zip</code></p>
 
 <p>
   <a href="README_zh.md">简体中文</a> ·
@@ -21,7 +27,7 @@
 
 Auto-Resubmit converts a source LaTeX paper zip into a target conference template zip while keeping the manuscript content intact.
 
-自动重投：给定“源论文 LaTeX 项目 zip”和“目标会议模板 zip”，工具会自动抽取论文主体内容，并按目标会议模板重新组装、编译和打包，尽量减少手工改模板的工作量。
+自动重投：支持 ACL、EMNLP、NeurIPS、NIPS、ICML、ICLR、CVPR、ICCV、AAAI 等会议家族之间的模板互转。给定“源论文 LaTeX 项目 zip”和“目标会议模板 zip”，工具会自动抽取论文主体内容，并按目标会议模板重新组装、编译和打包，尽量减少手工改模板的工作量。
 
 It is designed for the common resubmission workflow:
 
@@ -97,3 +103,15 @@ On success, the output directory contains:
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=LilanOvO/Auto-Resubmit&type=Date)](https://star-history.com/#LilanOvO/Auto-Resubmit&Date)
+
+## Roadmap
+
+This repository is still an early version of Auto-Resubmit.
+
+The longer-term goal is to evolve it into a multi-agent system that can:
+
+- identify the reviewer feedback that is actually actionable
+- revise and improve a paper from the previous venue
+- migrate the final manuscript into the target conference template with cleaner automation
+
+If this direction interests you, collaborations are welcome. If you would like to contribute and join as a contributor, feel free to contact me at `zjuqww@gmail.com`.

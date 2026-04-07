@@ -1,9 +1,15 @@
 <div align="center">
-  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit banner" width="620" />
+  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit banner" width="420" />
 
 # Auto-Resubmit
 
 <p><strong>面向会议重投的 LaTeX 模板无损迁移工具。</strong></p>
+
+<p><strong>ACL / EMNLP / NeurIPS / NIPS / ICML / ICLR / CVPR / ICCV / AAAI</strong></p>
+
+<p><strong>支持这些会议家族之间的相互转换</strong></p>
+
+<p><code>源论文 zip</code> → <code>Auto-Resubmit</code> → <code>目标会议模板 zip</code></p>
 
 <p>
   <a href="README.md">English</a> ·
@@ -21,7 +27,7 @@
 
 Auto-Resubmit 用来把源 LaTeX 论文项目 zip 迁移到目标会议模板 zip，同时尽量保持论文内容不变。
 
-它主要解决重投场景里的模板迁移问题：
+它主要解决 ACL、EMNLP、NeurIPS、NIPS、ICML、ICLR、CVPR、ICCV、AAAI 等会议家族之间的重投模板迁移问题：
 
 - 读取源论文项目 zip
 - 读取目标会议模板 zip
@@ -95,3 +101,15 @@ auto_resubmit run \
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=LilanOvO/Auto-Resubmit&type=Date)](https://star-history.com/#LilanOvO/Auto-Resubmit&Date)
+
+## 后续计划
+
+这个仓库目前还是 Auto-Resubmit 的初步版本。
+
+我后续希望把它继续做成一个多 agent 系统，能够：
+
+- 自动识别审稿意见里真正有价值、可执行的部分
+- 基于上一会的论文自动完成进一步优化和修改
+- 在内容更新后，把论文更完整、更稳定地迁移到目标会议模板
+
+如果你对这个方向感兴趣，欢迎一起合作、加入 contributor。联系邮箱：`zjuqww@gmail.com`
