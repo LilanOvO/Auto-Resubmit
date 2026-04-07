@@ -1,15 +1,33 @@
 <div align="center">
-  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit banner" width="420" />
-
-# Auto-Resubmit
+<h1>
+  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit logo" width="52" />
+  Auto-Resubmit
+</h1>
 
 <p><strong>面向会议重投的 LaTeX 模板无损迁移工具。</strong></p>
 
-<p><strong>ACL / EMNLP / NeurIPS / NIPS / ICML / ICLR / CVPR / ICCV / AAAI</strong></p>
+<p>
+  <img src="https://img.shields.io/badge/ACL-0f766e?style=flat-square" alt="ACL" />
+  <img src="https://img.shields.io/badge/EMNLP-0ea5e9?style=flat-square" alt="EMNLP" />
+  <img src="https://img.shields.io/badge/NeurIPS-7c3aed?style=flat-square" alt="NeurIPS" />
+  <img src="https://img.shields.io/badge/NIPS-a855f7?style=flat-square" alt="NIPS" />
+  <img src="https://img.shields.io/badge/ICML-f97316?style=flat-square" alt="ICML" />
+  <img src="https://img.shields.io/badge/ICLR-ef4444?style=flat-square" alt="ICLR" />
+  <img src="https://img.shields.io/badge/CVPR-2563eb?style=flat-square" alt="CVPR" />
+  <img src="https://img.shields.io/badge/ICCV-1d4ed8?style=flat-square" alt="ICCV" />
+  <img src="https://img.shields.io/badge/AAAI-0891b2?style=flat-square" alt="AAAI" />
+</p>
 
-<p><strong>支持这些会议家族之间的相互转换</strong></p>
+<p>
+  <img src="https://img.shields.io/badge/支持-会议家族互转-111827?style=flat-square" alt="支持会议家族互转" />
+  <img src="https://img.shields.io/badge/无损-模板迁移-374151?style=flat-square" alt="无损模板迁移" />
+</p>
 
-<p><code>源论文 zip</code> → <code>Auto-Resubmit</code> → <code>目标会议模板 zip</code></p>
+<p>
+  <img src="https://img.shields.io/badge/源输入-论文%20Zip-22c55e?style=flat-square" alt="源输入 论文 Zip" />
+  <img src="https://img.shields.io/badge/Auto--Resubmit-自动迁移-f59e0b?style=flat-square" alt="Auto-Resubmit 自动迁移" />
+  <img src="https://img.shields.io/badge/目标输出-会议模板%20Zip-3b82f6?style=flat-square" alt="目标输出 会议模板 Zip" />
+</p>
 
 <p>
   <a href="README.md">English</a> ·

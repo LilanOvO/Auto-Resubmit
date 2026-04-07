@@ -1,15 +1,33 @@
 <div align="center">
-  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit banner" width="120" />
-
-# Auto-Resubmit
+<h1>
+  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit logo" width="52" />
+  Auto-Resubmit
+</h1>
 
 <p><strong>Lossless LaTeX template migration for conference resubmission.</strong></p>
 
-<p><strong>ACL / EMNLP / NeurIPS / NIPS / ICML / ICLR / CVPR / ICCV / AAAI</strong></p>
+<p>
+  <img src="https://img.shields.io/badge/ACL-0f766e?style=flat-square" alt="ACL" />
+  <img src="https://img.shields.io/badge/EMNLP-0ea5e9?style=flat-square" alt="EMNLP" />
+  <img src="https://img.shields.io/badge/NeurIPS-7c3aed?style=flat-square" alt="NeurIPS" />
+  <img src="https://img.shields.io/badge/NIPS-a855f7?style=flat-square" alt="NIPS" />
+  <img src="https://img.shields.io/badge/ICML-f97316?style=flat-square" alt="ICML" />
+  <img src="https://img.shields.io/badge/ICLR-ef4444?style=flat-square" alt="ICLR" />
+  <img src="https://img.shields.io/badge/CVPR-2563eb?style=flat-square" alt="CVPR" />
+  <img src="https://img.shields.io/badge/ICCV-1d4ed8?style=flat-square" alt="ICCV" />
+  <img src="https://img.shields.io/badge/AAAI-0891b2?style=flat-square" alt="AAAI" />
+</p>
 
-<p><strong>Mutual conversion across supported conference families</strong></p>
+<p>
+  <img src="https://img.shields.io/badge/Mutual-Conversion-111827?style=flat-square" alt="Mutual Conversion" />
+  <img src="https://img.shields.io/badge/Across-Supported%20Conference%20Families-374151?style=flat-square" alt="Across Supported Conference Families" />
+</p>
 
-<p><code>source paper zip</code> → <code>Auto-Resubmit</code> → <code>target conference template zip</code></p>
+<p>
+  <img src="https://img.shields.io/badge/Source-Paper%20Zip-22c55e?style=flat-square" alt="Source Paper Zip" />
+  <img src="https://img.shields.io/badge/Auto--Resubmit-Lossless%20Migration-f59e0b?style=flat-square" alt="Auto-Resubmit Lossless Migration" />
+  <img src="https://img.shields.io/badge/Target-Conference%20Template%20Zip-3b82f6?style=flat-square" alt="Target Conference Template Zip" />
+</p>
 
 <p>
   <a href="README_zh.md">简体中文</a> ·
