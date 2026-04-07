@@ -1,6 +1,6 @@
 <div align="center">
 <h1>
-  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit logo" width="52" />
+  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit logo" width="104" />
   Auto-Resubmit
 </h1>
 
@@ -18,16 +18,9 @@
   <img src="https://img.shields.io/badge/AAAI-0891b2?style=flat-square" alt="AAAI" />
 </p>
 
-<p>
-  <img src="https://img.shields.io/badge/Mutual-Conversion-111827?style=flat-square" alt="Mutual Conversion" />
-  <img src="https://img.shields.io/badge/Across-Supported%20Conference%20Families-374151?style=flat-square" alt="Across Supported Conference Families" />
-</p>
+<p><strong>Mutual Conversion Across Supported Conference Families</strong></p>
 
-<p>
-  <img src="https://img.shields.io/badge/Source-Paper%20Zip-22c55e?style=flat-square" alt="Source Paper Zip" />
-  <img src="https://img.shields.io/badge/Auto--Resubmit-Lossless%20Migration-f59e0b?style=flat-square" alt="Auto-Resubmit Lossless Migration" />
-  <img src="https://img.shields.io/badge/Target-Conference%20Template%20Zip-3b82f6?style=flat-square" alt="Target Conference Template Zip" />
-</p>
+<p><code>Source Paper Zip</code> → <code>Auto-Resubmit Lossless Migration</code> → <code>Target Conference Template Zip</code></p>
 
 <p>
   <a href="README_zh.md">简体中文</a> ·

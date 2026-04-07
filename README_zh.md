@@ -1,6 +1,6 @@
 <div align="center">
 <h1>
-  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit logo" width="52" />
+  <img src="assets/auto-resubmit-banner.png" alt="Auto-Resubmit logo" width="104" />
   Auto-Resubmit
 </h1>
 
@@ -18,16 +18,9 @@
   <img src="https://img.shields.io/badge/AAAI-0891b2?style=flat-square" alt="AAAI" />
 </p>
 
-<p>
-  <img src="https://img.shields.io/badge/支持-会议家族互转-111827?style=flat-square" alt="支持会议家族互转" />
-  <img src="https://img.shields.io/badge/无损-模板迁移-374151?style=flat-square" alt="无损模板迁移" />
-</p>
+<p><strong>支持这些会议家族之间的相互转换</strong></p>
 
-<p>
-  <img src="https://img.shields.io/badge/源输入-论文%20Zip-22c55e?style=flat-square" alt="源输入 论文 Zip" />
-  <img src="https://img.shields.io/badge/Auto--Resubmit-自动迁移-f59e0b?style=flat-square" alt="Auto-Resubmit 自动迁移" />
-  <img src="https://img.shields.io/badge/目标输出-会议模板%20Zip-3b82f6?style=flat-square" alt="目标输出 会议模板 Zip" />
-</p>
+<p><code>源论文 Zip</code> → <code>Auto-Resubmit 自动迁移</code> → <code>目标会议模板 Zip</code></p>
 
 <p>
   <a href="README.md">English</a> ·
