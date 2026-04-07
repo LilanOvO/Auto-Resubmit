@@ -109,7 +109,7 @@ On success, the output directory contains:
 
 ## Star History ⭐
 
-[![Star History Chart](https://api.star-history.com/image?repos=LilanOvO/Auto-Resubmit&type=Date&v=20260407)](https://star-history.com/#LilanOvO/Auto-Resubmit&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=LilanOvO/Auto-Resubmit&type=Date&v=20260407)](https://star-history.com/#LilanOvO/Auto-Resubmit&Date)
 
 ## Roadmap 🛣️
 
