@@ -83,7 +83,6 @@ cd Auto-Resubmit
 
 conda create -n auto-resubmit python=3.10 -y
 conda activate auto-resubmit
-python -m pip install --upgrade pip
 python -m pip install --editable .
 ```
 
@@ -92,7 +91,6 @@ python -m pip install --editable .
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-python -m pip install --upgrade pip
 python -m pip install --editable .
 ```
 
