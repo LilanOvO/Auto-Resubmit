@@ -47,7 +47,7 @@ TEMPLATE_CONFIGS: dict[str, dict[str, object]] = {
         "preferred_main_names": ("main.tex",),
         "default_bibliographystyle": r"\bibliographystyle{ieeenat_fullname}",
         "skip_packages": {"cvpr"},
-        "source_strip_packages": {"cvpr"},
+        "source_strip_packages": {"cvpr", "axessibility"},
         "source_strip_commands": (),
         "strip_macros": ("title", "author", "date"),
     },
@@ -433,6 +433,8 @@ def strip_frontmatter(document_body: str, source_kind: str, main_tex: Path) -> t
         body = strip_icml_frontmatter(body)
     if source_kind == "neurips":
         body = strip_neurips_artifacts(body)
+    if source_kind == "cvpr":
+        body = strip_cvpr_frontmatter(body)
 
     abstract_env = extract_environment(body, "abstract")
     if abstract_env:
@@ -475,6 +477,37 @@ def strip_neurips_artifacts(body: str) -> str:
     return body
 
 
+def strip_cvpr_frontmatter(body: str) -> str:
+    body = unwrap_cvpr_teaser_block(body)
+    body = re.sub(r"^\s*\\maketitle\s*$", "", body, flags=re.MULTILINE)
+    body = re.sub(r"^\s*\\renewcommand\\twocolumn\[1\]\[\]\{#1\}\s*%?\s*$", "", body, flags=re.MULTILINE)
+    while True:
+        footnote_block = extract_macro_block(body, "blfootnote")
+        if not footnote_block:
+            break
+        body = body.replace(footnote_block, "", 1)
+    return body.strip()
+
+
+def unwrap_cvpr_teaser_block(body: str) -> str:
+    masked = mask_comments(body)
+    start = masked.find(r"\twocolumn[")
+    if start == -1:
+        return body
+    open_bracket = masked.find("[", start)
+    if open_bracket == -1:
+        return body
+    close_bracket = find_matching_bracket(masked, open_bracket)
+    inner = body[open_bracket + 1 : close_bracket]
+    inner = re.sub(r"^\s*\{?%\s*", "", inner)
+    inner = re.sub(r"^\s*\\renewcommand\\twocolumn\[1\]\[\]\{#1\}\s*", "", inner, count=1)
+    inner = re.sub(r"^\s*\\maketitle\s*", "", inner, count=1)
+    inner = re.sub(r"\}\s*$", "", inner.strip())
+    inner = inner.strip()
+    rebuilt = inner + "\n\n" + body[close_bracket + 1 :]
+    return rebuilt.strip()
+
+
 def extract_cvpr_abstract_from_inputs(body: str, main_tex: Path) -> tuple[str, str]:
     masked = mask_comments(body)
     patterns = [
@@ -487,9 +520,39 @@ def extract_cvpr_abstract_from_inputs(body: str, main_tex: Path) -> tuple[str, s
             continue
         input_path = resolve_tex_input_path(main_tex.parent, match.group("path"))
         abstract_text = load_text(input_path).strip() if input_path else ""
+        abstract_env = extract_environment(abstract_text, "abstract")
+        if abstract_env:
+            _, abstract_text = abstract_env
         body = body[: match.start()] + body[match.end() :]
-        return abstract_text, body
+        return abstract_text.strip(), body
     return "", body
+
+
+def extract_cvpr_appendix_from_inputs(body: str, main_tex: Path) -> tuple[str, str]:
+    masked = mask_comments(body)
+    patterns = [
+        re.compile(r"^\s*\\input\{(?P<path>[^}]*suppl[^}]*)\}\s*$", re.MULTILINE),
+        re.compile(r"^\s*\\input\{(?P<path>[^}]*appendix[^}]*)\}\s*$", re.MULTILINE),
+        re.compile(r"^\s*\\input\{(?P<path>sec/X_suppl)\}\s*$", re.MULTILINE),
+    ]
+    for pattern in patterns:
+        match = pattern.search(masked)
+        if not match:
+            continue
+        input_path = resolve_tex_input_path(main_tex.parent, match.group("path"))
+        appendix_text = load_text(input_path).strip() if input_path else ""
+        appendix_text = strip_cvpr_appendix_frontmatter(appendix_text)
+        body = body[: match.start()] + body[match.end() :]
+        return appendix_text, body
+    return "", body
+
+
+def strip_cvpr_appendix_frontmatter(text: str) -> str:
+    cleaned = text.strip()
+    cleaned = re.sub(r"^\s*\\clearpage\s*", "", cleaned, flags=re.MULTILINE)
+    cleaned = re.sub(r"^\s*\\setcounter\{page\}\{[^}]*\}\s*", "", cleaned, flags=re.MULTILINE)
+    cleaned = re.sub(r"^\s*\\maketitlesupplementary\s*", "", cleaned, flags=re.MULTILINE)
+    return cleaned.strip()
 
 
 def resolve_tex_input_path(base_dir: Path, relative_path: str) -> Path | None:
@@ -527,6 +590,8 @@ def build_source_representation(root_dir: Path) -> tuple[Path, str, str, str, st
         warnings.append("Source paper does not contain an abstract environment.")
 
     main_plus_bib, appendix = split_appendix(body_without_frontmatter)
+    if source_kind == "cvpr" and not appendix:
+        appendix, main_plus_bib = extract_cvpr_appendix_from_inputs(main_plus_bib, main_tex)
     main_body, bibliography_block = split_bibliography(main_plus_bib)
     bibliography_block, bibliography_style = extract_bibliography_style(bibliography_block)
     source_preamble = add_inferred_source_packages(
@@ -930,6 +995,8 @@ def add_inferred_source_packages(source_preamble: str, body_text: str) -> str:
         ((r"\text{", r"\eqref{", r"\dfrac", r"\overset", r"\underset"), "amsmath"),
         ((r"\triangleq", r"\mathbb", r"\mathfrak", r"\leqslant", r"\geqslant"), "amssymb"),
         ((r"\mathscr",), "mathrsfs"),
+        ((r"\xspace",), "xspace"),
+        ((r"\begin{enumerate}[", r"\begin{itemize}["), "enumitem"),
         ((r"\DeclareCaptionStyle", r"\captionsetup", r"\captionof"), "caption"),
     )
 
