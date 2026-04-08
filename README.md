@@ -59,6 +59,31 @@ It is designed for the common resubmission workflow:
 
 Details: [SUPPORT_MATRIX.md](SUPPORT_MATRIX.md)
 
+## Current Scope ⚠️
+
+Auto-Resubmit is still an early, rule-based version.
+
+It already handles the main conversion workflow across the supported conference families, but it does not claim to cover every LaTeX convention used by every research paper. Some papers contain custom frontmatter logic, self-defined environments, special title-page layouts, unusual appendix entrypoints, or package interactions that are not yet covered by the current rules.
+
+In practice, conversion is most likely to work well when:
+
+- the source is a standard LaTeX project zip
+- the source has one clear main entry file
+- figures, bibliography files, and local style files are all included
+- the paper mostly follows a standard conference template structure
+- custom macros are present, but do not completely redefine the document structure
+
+You may still need to make manual fixes when:
+
+- the paper uses heavily customized frontmatter or title-page logic
+- abstract, appendix, or bibliography are injected through nonstandard wrappers
+- the source relies on custom build scripts or external assets
+- the source defines special commands or environments that the current rules do not infer correctly
+
+The good news is that the main conversion scaffold is already there. If a case is close but not perfect, it is often fixable with a small rule update rather than a full rewrite.
+
+If you run into one of these cases, you are very welcome to fork the repository and patch the rules for your own template or paper. Using tools like Codex or Claude Code is often enough to diagnose and fix these edge cases quickly.
+
 ## Installation ⚙️
 
 ### Requirements
@@ -176,31 +201,6 @@ On success, the output directory contains:
 - The source zip should contain one real manuscript entrypoint
 - Figures, `.bib`, and local `.sty` files should be included in the zip
 - Projects that depend on private shell scripts or missing external assets are out of scope
-
-## Current Scope ⚠️
-
-Auto-Resubmit is still an early, rule-based version.
-
-It already handles the main conversion workflow across the supported conference families, but it does not claim to cover every LaTeX convention used by every research paper. Some papers contain custom frontmatter logic, self-defined environments, special title-page layouts, unusual appendix entrypoints, or package interactions that are not yet covered by the current rules.
-
-In practice, conversion is most likely to work well when:
-
-- the source is a standard LaTeX project zip
-- the source has one clear main entry file
-- figures, bibliography files, and local style files are all included
-- the paper mostly follows a standard conference template structure
-- custom macros are present, but do not completely redefine the document structure
-
-You may still need to make manual fixes when:
-
-- the paper uses heavily customized frontmatter or title-page logic
-- abstract, appendix, or bibliography are injected through nonstandard wrappers
-- the source relies on custom build scripts or external assets
-- the source defines special commands or environments that the current rules do not infer correctly
-
-The good news is that the main conversion scaffold is already there. If a case is close but not perfect, it is often fixable with a small rule update rather than a full rewrite.
-
-If you run into one of these cases, you are very welcome to fork the repository and patch the rules for your own template or paper. Using tools like Codex or Claude Code is often enough to diagnose and fix these edge cases quickly.
 
 ## Troubleshooting 🩺
 
