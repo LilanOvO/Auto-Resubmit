@@ -61,28 +61,100 @@ Details: [SUPPORT_MATRIX.md](SUPPORT_MATRIX.md)
 
 ## Installation ⚙️
 
-- Python 3.10+
-- A working `tectonic` installation for PDF compilation
+### Requirements
 
-Set up the Python environment:
+- Python `3.10+`
+- `pip`
+- `tectonic`
+
+### Python Dependencies
+
+Auto-Resubmit currently uses only the Python standard library.
+
+- Third-party Python packages: none
+- External tool required for PDF compilation: `tectonic`
+
+`python -m pip install --editable .` installs the current repository itself and exposes the `auto_resubmit` command-line entrypoint.
+
+### Option A: `conda`
+
+```bash
+git clone https://github.com/LilanOvO/Auto-Resubmit.git
+cd Auto-Resubmit
+
+conda create -n auto-resubmit python=3.10 -y
+conda activate auto-resubmit
+python -m pip install --upgrade pip
+python -m pip install --editable .
+```
+
+### Option B: `venv`
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install --upgrade pip
-pip install -e .
+python -m pip install --upgrade pip
+python -m pip install --editable .
 ```
 
-Check that the LaTeX compiler is available:
+If you do not need editable mode, you can also use:
+
+```bash
+python -m pip install .
+```
+
+### Install `tectonic`
+
+Install `tectonic` separately. After installation, this command should work:
 
 ```bash
 tectonic --version
+```
+
+Typical install options:
+
+```bash
+# conda
+conda install -c conda-forge tectonic
+```
+
+```bash
+# cargo
+cargo install tectonic
+```
+
+```bash
+# macOS
+brew install tectonic
+```
+
+If `tectonic` is missing, the project can still generate the converted LaTeX project, but it will not produce the final PDF.
+
+### Verify the Installation
+
+After `pip install --editable .`, at least one of the following should work:
+
+```bash
+auto_resubmit --help
+```
+
+```bash
+python -m auto_resubmit --help
 ```
 
 ## Quick Start 🚀
 
 ```bash
 auto_resubmit run \
+  --source-zip /path/to/source-paper.zip \
+  --target-template-zip /path/to/target-template.zip \
+  --output-dir /path/to/output-dir
+```
+
+If `auto_resubmit` is not found in your shell, use:
+
+```bash
+python -m auto_resubmit run \
   --source-zip /path/to/source-paper.zip \
   --target-template-zip /path/to/target-template.zip \
   --output-dir /path/to/output-dir
@@ -106,6 +178,17 @@ On success, the output directory contains:
 - The source zip should contain one real manuscript entrypoint
 - Figures, `.bib`, and local `.sty` files should be included in the zip
 - Projects that depend on private shell scripts or missing external assets are out of scope
+
+## Troubleshooting 🩺
+
+- `auto_resubmit: command not found`
+  Use `python -m auto_resubmit --help` first. If that works, your environment is fine and only the shell entrypoint is missing.
+- `compiler: not_found`
+  `tectonic` is not installed or not on `PATH`.
+- `pdf_path: not_generated`
+  The converted LaTeX project was generated, but PDF compilation failed. Check `converted_project/tectonic.log`.
+- first `tectonic` run is slow
+  This is normal. `tectonic` may need to populate its local cache on first use.
 
 ## Star History ⭐
 
